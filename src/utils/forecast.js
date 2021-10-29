@@ -10,7 +10,7 @@ const forecast = (city, callback) => {
             callback('Unable to find location!', undefined)
         }     
         else {
-            callback(undefined, response.body.current.weather_descriptions[0] + '. Temperatura actual: ' + response.body.current.temperature + ' grados. Temperatura en el exterior: ' + response.body.current.feelslike + ' grados')
+            callback(undefined, 'Local time is ' + response.body.location.localtime + '. Clima ' + response.body.current.weather_descriptions[0] + '. Temperatura actual: ' + response.body.current.temperature + ' grados. Temperatura en el exterior: ' + response.body.current.feelslike + ' grados')
         }
     })
 }
