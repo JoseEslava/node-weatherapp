@@ -67,6 +67,14 @@ app.get('/help/*', (req, res) => {
     })
 })
 
+app.get('/about/*', (req, res) => {
+    res.render('404', {
+        titulo: '404 Page',
+        nombre: 'Jose Eslava',
+        errorMessage: 'There is no more info!'
+    })
+})
+
 app.get('*', (req, res) => {
     res.render('404', {
         titulo: '404 Page',
